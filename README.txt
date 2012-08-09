@@ -39,7 +39,7 @@
 //
 // SPI configuration parameters of PN532 chip (NFC) are different from the SPI parameters of 
 // W5100 chip (Ethernet). 
-// In paricular PN532 uses LSBFIRST bit order while W5100 uses MSBFIRST bit order.
+// In particular PN532 uses LSBFIRST bit order while W5100 uses MSBFIRST bit order.
 // Since both chips are reusing the same library and HW, we need to backup/restore the SPI configuration 
 // everytime that we use NFC functionality from the new PN532 library
 //
