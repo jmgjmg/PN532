@@ -43,6 +43,15 @@
 // Since both chips are reusing the same library and HW, we need to backup/restore the SPI configuration everytime 
 // that we use NFC functionality from the new PN532 library
 //
+// Instructions for Arduino Mega 2560 or ADK:
+// The HW digital PINs for SPI are different in Arduino Mega (MOSI->51; MISO->50; SCK->52)
+// The library and sample sketch are fully compatible with Arduino Mega. To make it work, just change the wiring of 
+// ICSP header PINs of NFC shield:
+//   * Wire female ICSP PINs of NFC shield to the appropriate female PINs ofArduino Mega/ADK shield:
+//            SCK  (ICSP NFC)  -> 52 (Mega)
+//            MISO (ICSP NFC)  -> 50 (Mega)
+//            MOSI (ICSP NFC)  -> 51 (Mega)
+//
 //
 // KNOWN ISSUES
 // ============
