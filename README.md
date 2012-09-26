@@ -9,9 +9,9 @@ The original PN532 library from seeedstudio uses a dedicated SPI SW implementati
 The benefit of HW approach is that MISO/MOSI/SCK PINs can be reused between NFC and Ethernet shields. 
 Chip Select (SS) PIN must be different for Ethernet and NFC shields.
 In fact, there are three different SS PINs: 
-     - Ethernet chip hardwired to PIN 10 in Ethernet shield
-     - SD card chip hardwired to PIN 4 in Ethernet shield
-     - NFC chip hardwired to PIN10 in NFC shield
+- Ethernet chip hardwired to PIN 10 in Ethernet shield
+- SD card chip hardwired to PIN 4 in Ethernet shield
+- NFC chip hardwired to PIN10 in NFC shield
 
 In order to avoid conflict between PIN10 in both shields when NFC shield is stacked on top of 
 Ethernet shield, male PIN 10 of NFC shield must be bent so that it does not
@@ -85,9 +85,12 @@ Alternatively, you can use other similar services available in Internet.
 
 You have to retrieve your authentication token from https:evrythng.net/settings/tokens and update 
 its value in your Arduino code: 
-     client.println("X-Evrythng-Token: ...yourAPITokenHere...")
+
+    client.println("X-Evrythng-Token: ...yourAPITokenHere...")
+    
 You must also crate a new thng in evrytng with a property called ReadTag. Once created, you have 
 to update its thngId value in your Arduino code: 
+
     client.println("PUT http:evrythng.net/thngs/...yourThingIdHere.../properties/ReadTag HTTP/1.1");
 
 
